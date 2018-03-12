@@ -1,22 +1,22 @@
 Package.describe({
     name: 'ipstas:autoform-tags-typeahead',
-    version: '0.7.2',
+    version: '0.7.3',
     summary: 'Provides a autoform tags input with typeahead functionality',
-    git: 'https://github.com/Redroest/meteor-autoform-tags-typeahead',
+    git: 'https://github.com/ipstas/meteor-autoform-tags-typeahead',
     documentation: 'README.md'
 });
 
 Package.onUse(function (api) {
-    api.versionsFrom('1.1.0.3');
+    api.versionsFrom('1.3');
 
     api.use([
-				'mongo',
-        'ajduke:bootstrap-tagsinput',
-        'mrt:bootstrap3-typeahead',
-        'templating',
-				'blaze',
-				'underscore',
-				'aldeed:autoform'
+	'mongo',
+	'ajduke:bootstrap-tagsinput',
+	'mrt:bootstrap3-typeahead',
+	'templating',
+	'blaze',
+	'underscore',
+	'aldeed:autoform'
     ]);
 
     api.addFiles([
