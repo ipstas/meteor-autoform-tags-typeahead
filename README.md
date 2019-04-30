@@ -1,13 +1,15 @@
 ## Autoform Tags Typeahead
 
 Extends autoform with a tags input including typeahead. Besides providing the input, it also takes care of storing the unique tags for use in the typeahead addition to autofill the input while typing.
+
+forked from cloudspider:autoform-tags-typeahead, updated to latest autoform
  
 ## Installation
 
 In a Meteor app directory, enter:
 
 ```
-$ meteor add cloudspider:autoform-tags-typeahead
+$ meteor add ipstas:autoform-tags-typeahead
 ```
 
 ## Example usage
@@ -19,7 +21,7 @@ SomeSchema = new SimpleSchema({
         type: [String],
         label: 'Tags',
         autoform: {
-            type: 'tagsTypeahead',
+            type: 'tags',
         }
     }
 });

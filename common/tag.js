@@ -1,12 +1,12 @@
 
 CloudspiderTags = new Mongo.Collection('cloudspider_tags');
 
-if(Meteor.isClient) {
+if (Meteor.isClient) {
     Meteor.subscribe('cloudspider_tags');
 }
 
 
-if(Meteor.isServer) {
+if (Meteor.isServer) {
     CloudspiderTags.allow({
         insert: function () {
             return true;
@@ -28,8 +28,10 @@ TagsUtil = {
         var tag = CloudspiderTags.findOne({
             name: name
         });
-console.log(tag);
-        if(tag) {
+				
+				console.log(tag);
+				
+        if (tag) {
             return tag;
         }
         CloudspiderTags.insert({
