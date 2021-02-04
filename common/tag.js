@@ -1,3 +1,5 @@
+//export const CloudspiderTags = 'ipstas:autoform-tags-typeahead';
+//export const TagsUtil = 'ipstas:autoform-tags-typeahead';
 
 CloudspiderTags = new Mongo.Collection('cloudspider_tags');
 
@@ -16,7 +18,6 @@ if (Meteor.isServer) {
     Meteor.publish('cloudspider_tags', function() {
         return CloudspiderTags.find({});
     });
-
 }
 
 
@@ -51,9 +52,7 @@ TagsUtil = {
             .replace(/ /g, '-')
             .replace(/[^\w-]+/g, '');
     },
-
-
-
 };
 
-
+export {TagsUtil} ;
+export {CloudspiderTags} ;

@@ -1,3 +1,5 @@
+import './tags-typeahead.html';
+
 AutoForm.addInputType("tags", {
 	template: "afTagsTypeahead",
 	
@@ -39,12 +41,12 @@ Template.afTagsTypeahead.onRendered(function() {
 	};
 
 	//Extend tagsinput options
-	if(this.data.atts && this.data.atts.tagsinput) {
+	if (this.data.atts && this.data.atts.tagsinput) {
 		_.extend(options, this.data.atts.tagsinput);
 	}
 
 	//Add typeahead options if there are any
-	if(this.data.atts && this.data.atts.typeahead) {
+	if (this.data.atts && this.data.atts.typeahead) {
 		options.typeahead = this.data.atts.typeahead;
 	}
 
